@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neo Rider - Loja</title>
+  <link rel="stylesheet" href="css/styleprojeto.css" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#0ea5e9">
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/sw.js");
+    }
+  </script>
+  <style>
+    body {
+      background-image: url("imagens/fundo.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(10, 10, 10, 0.274);
+      padding: 10px 30px;
+      height: 150px;
+    }
+    main {
+      padding: 20px;
+    }
+     
+    .navbar a {
+      text-decoration: none;
+      color: #e4e4e4;
+      padding: 10px 16px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      margin-left: 20px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .navbar a:hover {
+      background: linear-gradient(90deg, #25385f, #00f1f1);
+      color: white;
+      box-shadow: 0 0 15px #2563eb;
+      transform: translateY(-3px);
+    }
+
+    #selecionado {
+      background: linear-gradient(90deg, #25385f, #00f1f1);
+      color: white;
+      box-shadow: 0 0 15px #2563eb;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    figure {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .section {
+      text-align: center;
+      margin-bottom: 40px;
+      color: white;
+    }
+
+    .produtos-container {
+      display: flex;
+      flex-wrap: wrap;       /* permite quebrar para a próxima linha */
+      justify-content: center; /* centraliza os elementos na horizontal */
+      gap: 30px;
+      }
+
+    .produto {
+      background-color: rgb(245, 245, 245);
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.952);
+      width: 300px;
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+
+    .produto:hover {
+      transform: translateY(-5px);
+    }
+
+    .produto img {
+      width: 80%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .produto h2 {
+      font-size: 20px;
+      margin: 10px 0;
+    }
+
+    .produto p {
+      margin: 5px 0;
+      font-size: 16px;
+    }
+
+    .produto button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: linear-gradient(90deg, #2564eb, #00f1f1);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 0 15px #070a11;
+      transition: background-color 0.3s;
+    }
+
+    .produto button:hover {
+      background-color: #fafafa;
+      color: black;
+    }
+
+    /* ====== NOVO: layout lado a lado ====== */
+    .conteudo {
+      display: flex;             /* Ativa o flexbox */
+      justify-content: space-between; /* espaço entre vídeo e produtos */
+      align-items: flex-start;   /* alinha pelo topo */
+      gap: 30px;                 /* espaçamento entre os lados */
+     margin: 30px;
+   }   
+   .caixa1, .caixa2 {
+   flex: 1;                   /* cada caixa ocupa metade */
+   max-width: 50%;            /* garante que não ultrapasse */
+   }
+
+
+
+  </style>
+</head>
+<body>
+ 
+  <header class="header">
+    <a href="index.html">
+      <img src="imagens/neo-rider8.png" alt="Neo Rider" width="200" />
+    </a>
+    <nav class="navbar">
+      <a id="selecionado" href="projeto.html">Home</a>
+      <a href="sobre.html">Sobre nós</a>
+      <a href="cadastro.html">Cadastro</a>
+      <a href="neorider.html">Sistema</a>
+    </nav>
+  </header>
+
+  <main>
+    <figure>
+      <img src="imagens/neo-rider7.png" alt="Banner Neo Rider" width="500" />
+    </figure>
+
+    <section class="section">
+      <h1>Capacetes da Nova Geração</h1>
+      <h2>Conheça nossos produtos mais avançados em proteção e estilo.</h2>
+    </section>
+     
+   
+   </div>
+   <div style="text-align: center;">
+    <video src="videos/video1.mp4" width="50%" controls></video>
+   </div>
+    <section class="produtos-container" id="produtos">
+      <!-- Produtos adicionados dinamicamente -->
+    </section>
+  </main>
+
+ 
+      <div id="produtos"></div>
+    </div>
+     <div class="caixa">
+    <section class="produtos-container" id="produtos">
+      <!-- Produtos adicionados dinamicamente -->
+    </section>
+  </div>
+    
+ 
+  <script>
+    const produtos = [
+      {
+        nome: "Atlas",
+        quantidade: 20,
+        preco: 399.90,
+        imagem: "imagens/neo-rider2.png"
+      },
+      {
+        nome: "AMD 7020",
+        quantidade: 15,
+        preco: 459.00,
+        imagem: "imagens/imagem1.png"
+      },
+      {
+        nome: "Tron",
+        quantidade: 35,
+        preco: 499.99,
+        imagem: "imagens/imagem3.jpg"
+      },
+      {
+        nome: "TX400",
+        quantidade: 12,
+        preco: 549.99,
+        imagem: "imagens/imagem0.png"
+      },
+      {
+        nome: "Ghost",
+        quantidade: 10,
+        preco: 599.90,
+        imagem: "imagens/neo-rider.png"
+      },
+      {
+        nome: "Speed Rider",
+        quantidade: 8,
+        preco: 699.90,
+        imagem: "imagens/imagem3.png"
+      }
+    ];
+
+    const container = document.getElementById("produtos");
+
+    produtos.forEach((produto) => {
+      const card = document.createElement("div");
+      card.className = "produto";
+      card.innerHTML = `
+        <img src="${produto.imagem}" alt="${produto.nome}">
+        <h2>${produto.nome}</h2>
+        <p>Preço: R$ ${produto.preco.toFixed(2)}</p>
+        <p>Estoque: ${produto.quantidade} unidades</p>
+        <button onclick="comprar('${produto.nome}')">Comprar</button>
+      `;
+      container.appendChild(card);
+    });
+
+    function comprar(nome) {
+      alert(`Você selecionou o produto: ${nome}\nCompra efetuada com sucesso!`);
+    }
+  </script>
+</body>
+</html>

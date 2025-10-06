@@ -1,0 +1,241 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0f172a; /* azul bem escuro */
+  color: #ffffff; /* cinza claro */
+  display:block;
+  justify-content: center; /* centraliza horizontal */
+  align-items: center;     /* centraliza vertical */
+  min-height: 100vh;       /* ocupa altura total da tela */
+  padding: 20px;           /* espaçamento nas bordas */
+}
+
+
+
+h1 {
+  color: white;
+  font-size: 24px;     /* tamanho da fonte */
+  font-weight: bold;   /* negrito */
+  font-family: Arial, sans-serif; /* fonte */
+  text-transform: uppercase; /* deixa o texto em maiúsculas */
+ 
+}
+
+h2 {
+  background: linear-gradient(to right, rgba(0, 255, 242, 0.315),rgba(187, 6, 223, 0.021));
+  border-radius: 5px;
+  color: white;
+  box-shadow: 0 0 15px #0b90e9;
+  transform: translateY(-3px);
+  width: 1px;
+  height: 24px;
+  transform: translateY(-3px);
+  background: linear-gradient(to right, rgba(0, 238, 255, 0.116),rgba(187, 6, 223, 0.021));
+  width: 40%;
+  text-align: center;
+ }
+
+a {
+  text-decoration: none; /* remove o sublinhado */
+  color: white;
+}
+
+
+.navbar{
+ background: linear-gradient(90deg, #eff5ff, #00f1f1);
+ color: white;
+ margin-top: 1px;
+ margin-top: auto;
+ padding: 3px;  
+ border: papayawhip;
+ border-radius: 65px;
+ font-size: 19px;          /* tamanho da fonte */
+ cursor: pointer;          /* muda o cursor para "mãozinha" */
+ background: linear-gradient(90deg, #2564eb, #00f1f1);
+ box-shadow: 0 0 15px #2563eb;
+ transform: translateY(+8px); /* levanta o botão */
+ display: flex;
+ width: 5%;
+}
+
+header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ background-color: rgba(10, 10, 10, 0.897);
+ padding: 10px 30px;
+ height: 150px;  /* altura */
+ }
+
+header h1 {
+  margin: 0;
+  color: #080404f3;
+ 
+}
+
+header p {
+  color: #ba00f32f;
+  font-size: 14px;
+}
+
+
+.form-cadastro {
+  display: flex;
+  flex-direction: column; /* itens ficam em coluna */
+  gap: 12px;
+}
+
+#remove{
+ width: 20%
+
+}
+
+label {
+
+  justify-content:auto;
+  display: flex;
+  font-weight: 5vw;
+  font-size: 18px;
+  margin-bottom: 1px;
+  text-shadow: 6px 2px 5px rgb(0, 0, 0); /* sombra deslocada 2px horizontal e vertical, borrada 5px */
+  background: linear-gradient(to right, rgba(0, 255, 242, 0.315),rgba(187, 6, 223, 0.021));
+  border-radius: 5px;
+  color: white;
+  box-shadow: 0 0 15px #0b90e9;
+  transform: translateY(-3px);
+  width: 16%;
+  height: 24px;
+}
+
+
+
+
+body {
+  display: grid;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;     /* Centraliza verticalmente */
+  height: 15vh;           /* Ocupa toda a altura da tela */
+  margin: 4;               /* Remove margens padrão */
+  gap: 1px; /* espaço entre elementos */
+  
+}
+
+
+input, textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #000000;
+  background-color: #e4e2e2de;
+  color: #0f0f11;
+  font-size: 14px;
+  justify-content: flex-end;
+  
+ display: inline-block;
+ 
+}
+
+img {
+  display: grid;
+  display: block;
+  margin: 0 auto; /* margens automáticas centralizam */
+  border-radius: 15px;
+ 
+}
+
+div{
+  color:#ffffff;
+  border-radius: 5px;
+  background-color: #e608ee0a;
+  background: linear-gradient(to right, rgba(47, 0, 255, 0.075),rgba(187, 6, 223, 0.021));
+  display: inline;
+}
+
+input:focus, textarea:focus {
+  outline: 2px solid #77bbbb;
+  border-color: #00b5fd91;
+  color: rgb(0, 0, 0);          /* cor do texto */
+  font-size: 21px;      /* tamanho da fonte */
+  font-weight: bold;    /* negrito */
+  margin-top: 1px;     /* espaço em cima */
+  background: #dbdbdb;  /* fundo cinza claro */
+  padding: 5px;         /* espaçamento interno */
+  border-radius: 9px;   /* cantos arredondados */
+  display: flex;
+  justify-content: space-around;
+  
+
+
+}
+
+textarea {
+  resize: vertical;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+button {
+  margin-top: 10px;
+  margin-top: auto;
+  padding: 12px;  
+  border: papayawhip;
+  border-radius: 65px;
+  font-size: 16px;
+  cursor: pointer;
+  background: lin!<DOCTYPE html>
+}
+
+/* === Ajustes para telas menores (celulares) === */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+    display: block; /* mais seguro em telas pequenas */
+    height: auto;
+  }
+
+  h1 {
+    font-size: 22px;
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 18px;
+    width: 100%; /* ocupa toda a largura no celular */
+  }
+
+  .navbar {
+    flex-direction: column; /* links um embaixo do outro */
+    font-size: 16px;
+    width: 100%;
+    padding: 10px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  header h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  input, textarea {
+    width: 100%; /* campos ocupam largura total no mobile */
+    font-size: 16px;
+  }
+
+  button {
+    width: 100%; /* botão ocupa toda a largura */
+    font-size: 18px;
+  }
+
+  img {
+    max-width: 100%; /* imagem nunca passa da tela */
+    height: auto;
+  }
+}

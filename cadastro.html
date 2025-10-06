@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="stilo.css">
+  <style>
+    body {
+      background-image: url("imagens/fundo.png");
+      background-size: cover;  
+      background-repeat: no-repeat; 
+      background-attachment: fixed; 
+      background-position: center;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    
+    }
+
+    /* Flex container que coloca as divs lado a lado */
+    .container-horizontal {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      gap: 40px;
+      padding: 20px;
+      flex-wrap: wrap; /* importante para telas menores */
+    }
+
+    
+    #lista, #teste2 {
+      background: rgba(0, 0, 0, 0);
+      padding: 20px;
+      border-radius: 10px;
+      width: 45%; /* define largura igual para os dois */
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+       background: linear-gradient(90deg, #2564eb, #00f1f1);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    video {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+
+    pre {
+      background-color: #3ab6c700;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+      <a id="selecionado" href="projeto.html">voltar</a>
+  </nav>
+ 
+  <figure>
+  <img src="imagens/neo-rider8.png" alt="Banner Neo Rider" width="500" />
+  </figure>
+
+<h1>Aqui elevamos a sua experiência sobre duas rodas!</h1>
+  <h2>Cadastre-se e confira nossos produtos</h2> 
+
+<section id="teste1">
+  
+
+  <div class="container-horizontal">
+    <!-- Formulário de cadastro -->
+    <div id="lista">
+      <label for="nome">Nome:</label> 
+      <input type="text" id="nome"><br>
+
+      <label for="email">Email:</label>
+      <input type="text" id="email"><br>
+
+      <label for="cpf">Telefone:</label>
+      <input type="text" id="telefone"><br>
+
+      <button onclick="adicionarUsuario()">Adicionar</button>
+      <button onclick="mostrarUsuario()">Mostrar usuários cadastrados</button>
+
+      <h2>Cadastros:</h2>
+      <pre id="lista1"></pre>
+    </div>
+
+    <!-- Vídeo ao lado -->
+    <div id="teste2">
+      <video src="videos/video2.mp4" controls></video>
+    </div>
+  </div>
+</section>
+
+<script>
+  let usuarios = [];
+
+  function adicionarUsuario() {
+    let nome = document.getElementById("nome").value;
+    let email = document.getElementById("email").value;
+    let telefone = document.getElementById("telefone").value;
+
+    if (nome && email && telefone) {
+      usuarios.push({ nome, email, telefone });
+      alert("Usuário adicionado com sucesso!");
+    } else {
+      alert("Preencha todos os campos.");
+    }
+  }
+
+  function mostrarUsuario() {
+    const lista = document.getElementById("lista1");
+    lista.innerText = "";
+    usuarios.forEach((user, i) => {
+      lista.innerText += `${i + 1}. Nome: ${user.nome}| Email: ${user.email}| telefone: ${user.telefone}\n`;
+    });
+  }
+</script>
+
+</body>
+</html>
